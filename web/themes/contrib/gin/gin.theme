@@ -1,0 +1,267 @@
+<?php
+
+/**
+ * @file
+ * gin.theme
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_preprocess_HOOK() for html.
+ */
+function gin_preprocess_html(&$variables) {
+  // Get theme darkmode config.
+  $darkmode = theme_get_setting('enable_darkmode', 'gin');
+  $classic_toolbar = theme_get_setting('classic_toolbar', 'gin');
+
+  if ($darkmode === 1) {
+    $variables['attributes']['class'][] = 'gin--dark-mode';
+  }
+
+  if ($classic_toolbar === 1) {
+    $variables['attributes']['class'][] = 'gin--classic-toolbar';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.
+ */
+function gin_preprocess_page(&$variables) {
+  $path = \Drupal::service('path.current')->getPath();
+  $length = strlen('node/add');
+
+  // Check if we're directly on the node add page.
+  if (substr($path, -$length) === 'node/add') {
+    $variables['has_sidebar'] = 'false';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page_attachments.
+ */
+function gin_page_attachments_alter(&$page) {
+  // Is User logged in?
+  $logged_in = \Drupal::currentUser()->isAuthenticated();
+
+  if ($logged_in) {
+    // Get theme configs.
+    $accent_color = theme_get_setting('accent_color', 'gin');
+    $darkmode = theme_get_setting('enable_darkmode', 'gin');
+    $classic_toolbar = theme_get_setting('classic_toolbar', 'gin');
+
+    if ($classic_toolbar) {
+      // Attach the classic toolbar styles.
+      $page['#attached']['library'][] = 'gin/gin_classic_toolbar';
+    }
+    else {
+      // Attach toolbar styles.
+      $page['#attached']['library'][] = 'gin/gin_toolbar';
+    }
+
+    // Attach accent overrides CSS.
+    $page['#attached']['library'][] = 'gin/gin_accent';
+
+    // Expose settings to JS.
+    $page['#attached']['drupalSettings']['gin']['accent_color'] = $accent_color;
+    $page['#attached']['drupalSettings']['gin']['darkmode'] = $darkmode;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for links__dropbutton.
+ */
+function gin_preprocess_dropbutton_wrapper(&$variables) {
+  $children = (string) $variables['children'];
+
+  $pattern = '/(<ul\sclass\s*= *["\']?)([^"\']*)(.*)(<li)/i';
+  $lipattern = '/(<li class\s*= *["\']?)([^"\']*)/i';
+
+  $children = preg_replace($lipattern, '$1$2 dropbutton__item dropbutton__item--extrasmall', $children);
+  $children = preg_replace('/<li>/', '<li class="dropbutton__item dropbutton__item--extrasmall">', $children);
+  $children = preg_replace($pattern, '$1$2 dropbutton--multiple dropbutton--extrasmall $3$4', $children);
+
+  $variables['children'] = Markup::create($children);
+}
+
+/**
+ * Form_alter()
+ */
+function gin_form_alter(&$form, $form_state, $form_id) {
+  if (strpos($form_id, 'node_') !== FALSE && strpos($form_id, 'edit_form') !== FALSE) {
+    // Submit change weight.
+    if (isset($form['actions']['submit'])) {
+      $form['actions']['submit']['#weight'] = '99';
+    }
+
+    // If actions: show delete translation as danger button.
+    if (isset($form['actions']['delete_translation'])) {
+      $form['actions']['delete_translation']['#attributes']['class'][] = 'button--danger';
+    }
+
+    // If actions: remove delete action.
+    if (isset($form['actions']['delete'])) {
+      $form_delete = $form['actions']['delete'];
+      unset($form['actions']['delete']);
+    }
+
+    // If node form advanced: add delete.
+    if (isset($form['meta'])) {
+      $form['meta']['delete'] = $form_delete;
+      $form['meta']['delete']['#options']['attributes']['class'][] = 'button';
+      $form['meta']['delete']['#options']['attributes']['class'][] = 'button--danger';
+    }
+  }
+
+  // User form (Login, Register or Forgot password)
+  if (strpos($form_id, 'user_login') !== FALSE || strpos($form_id, 'user_register') !== FALSE || strpos($form_id, 'user_pass') !== FALSE) {
+    $form['actions']['submit']['#attributes']['class'][] = 'button--primary';
+  }
+
+  // Bulk forms: update action & actions to small variants.
+  if (strpos($form_id, 'views_form') !== FALSE) {
+    $bulk_form = current(preg_grep('/_bulk_form/', array_keys($form['header'])));
+
+    if ($form['header'][$bulk_form]) {
+      $form['header'][$bulk_form]['action']['#attributes']['class'][] = 'form-element--type-select--small';
+      $form['header'][$bulk_form]['actions']['submit']['#attributes']['class'][] = 'button--small';
+      $form['header'][$bulk_form]['actions']['submit']['#attributes']['class'][] = 'button--primary';
+
+      // Remove double entry of submit button.
+      unset($form['actions']['submit']);
+    }
+  }
+}
+
+/**
+ * Implements form_alter() for forms.
+ */
+function gin_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+}
+
+/**
+ * Page title alter().
+ */
+function gin_theme_suggestions_page_title_alter(array &$suggestions, array $variables) {
+  // Are we looking at a user?
+  $path = \Drupal::service('path.current')->getPath();
+
+  // Prepare $path.
+  $path = substr($path, 1);
+  $path = str_replace('/', '_', $path);
+
+  // Chek if path is available and we're at user level.
+  if (!empty($path) && strpos($path, 'user_') !== FALSE) {
+    $suggestions[] = 'page_title__user';
+    $suggestions[] = 'page_title__' . $path;
+  }
+}
+
+/**
+ * Toolbar alter().
+ */
+function gin_theme_suggestions_toolbar_alter(array &$suggestions, array $variables) {
+  $classic_toolbar = theme_get_setting('classic_toolbar', 'gin');
+
+  if (!$classic_toolbar) {
+    $suggestions[] = 'toolbar__gin';
+  }
+}
+
+/**
+ * Toolbar menu alter().
+ */
+function gin_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  $classic_toolbar = theme_get_setting('classic_toolbar', 'gin');
+
+  if ($variables['menu_name'] == 'admin' && !$classic_toolbar) {
+    $suggestions[] = 'menu__toolbar__gin';
+  }
+}
+
+/**
+ * Set Gin CSS on top of all other CSS files.
+ */
+function gin_css_alter(&$css, $assets) {
+  // UPDATE THIS PATH TO YOUR MODULE'S CSS PATH.
+  $path = drupal_get_path('theme', 'gin') . '/dist/css/gin.css';
+
+  if (isset($css[$path])) {
+    // Use anything greater than 100 to have it load after the theme
+    // as CSS_AGGREGATE_THEME is set to 100.
+    $css[$path]['group'] = 200;
+  }
+}
+
+/**
+ * Custom theme settings.
+ */
+function gin_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $form['custom_settings'] = [
+    '#type' => 'details',
+    '#open' => TRUE,
+    '#title' => t('Custom Settings'),
+  ];
+
+  $form['custom_settings']['enable_darkmode'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Enable Darkmode (EXPERIMENTAL)'),
+    '#description' => t("Enable Darkmode (Currently doesn't support a custom Accent color)."),
+    '#default_value' => theme_get_setting('enable_darkmode'),
+  ];
+
+  $form['custom_settings']['more'] = [
+    '#type' => 'container',
+    '#states' => [
+      // Hide Accent color when Darkmode is enabled for now.
+      'invisible' => [
+        'input[name="enable_darkmode"]' => ['checked' => TRUE],
+      ],
+    ],
+  ];
+
+  $form['custom_settings']['more']['accent_color'] = [
+    '#type' => 'color',
+    '#title' => t('Accent color (EXPERIMENTAL)'),
+    '#description' => t('Set the accent color for the login (hex value in format of #AAAAAA, Default value: #003cc5).'),
+    '#default_value' => theme_get_setting('accent_color'),
+    '#min' => 7,
+    '#max' => 7,
+  ];
+
+  $form['custom_settings']['classic_toolbar'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Enable Classic Drupal Toolbar'),
+    '#description' => t('Enable Classic Legacy Drupal Toolbar (Horizontal Toolbar).'),
+    '#default_value' => theme_get_setting('classic_toolbar'),
+  ];
+}
+
+/**
+ * Increases or decreases the brightness of a color.
+ */
+function _gin_adjust_brightness($hexCode, $adjustPercent) {
+  $hexCode = ltrim($hexCode, '#');
+
+  if (strlen($hexCode) == 3) {
+    $hexCode = $hexCode[0] . $hexCode[0] . $hexCode[1] . $hexCode[1] . $hexCode[2] . $hexCode[2];
+  }
+
+  $hexCode = array_map('hexdec', str_split($hexCode, 2));
+
+  foreach ($hexCode as & $color) {
+    $adjustableLimit = $adjustPercent < 0 ? $color : 255 - $color;
+    $adjustAmount = ceil($adjustableLimit * $adjustPercent);
+
+    $color = str_pad(dechex($color + $adjustAmount), 2, '0', STR_PAD_LEFT);
+  }
+
+  return '#' . implode($hexCode);
+}

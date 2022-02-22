@@ -1,0 +1,59 @@
+.paragraphs-tabs-wrapper {
+  tr {
+    &:hover, &:focus {
+      background-color: inherit;
+    }
+  }
+
+  .paragraphs-subform {
+    margin-top: 20px;
+    margin-right: 31px;
+  }
+
+  .tabledrag-toggle-weight-wrapper {
+    padding-bottom: 12px;
+  }
+
+  .field-multiple-table {
+    thead, tbody {
+      border: 1px solid #e6e4df;
+    }
+
+    thead {
+      .label {
+        display: inline-block;
+        color: #444;
+        text-transform: capitalize;
+        padding-top: 4px;
+      }
+    }
+
+    .draggable {
+      td {
+        padding: 30px 0 20px;
+      }
+    }
+  }
+
+  .paragraph-type-label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .paragraphs-subform {
+    .paragraph-type-label {
+      font-size: 14px;
+    }
+  }
+
+  .paragraph-type-add-modal,
+  .paragraphs-dropbutton-wrapper {
+    margin-right: 8px;
+  }
+}
+
+.paragraph {
+  .contextual {
+    display: none;
+  }
+}
