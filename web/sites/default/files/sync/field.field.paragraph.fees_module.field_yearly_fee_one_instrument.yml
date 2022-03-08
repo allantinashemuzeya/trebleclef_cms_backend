@@ -1,0 +1,23 @@
+uuid: 4b0c786e-bd2b-4daa-965a-8b71b08e1b49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_yearly_fee_one_instrument
+    - paragraphs.paragraphs_type.fees_module
+id: paragraph.fees_module.field_yearly_fee_one_instrument
+field_name: field_yearly_fee_one_instrument
+entity_type: paragraph
+bundle: fees_module
+label: 'Yearly Fee One Instrument'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

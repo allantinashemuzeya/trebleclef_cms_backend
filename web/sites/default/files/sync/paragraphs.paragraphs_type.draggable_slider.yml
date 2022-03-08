@@ -1,0 +1,10 @@
+uuid: 74bf0ef8-0bac-48fc-bc5d-557581540719
+langcode: en
+status: true
+dependencies: {  }
+id: draggable_slider
+label: 'Draggable Slider'
+icon_uuid: null
+icon_default: null
+description: 'Draggable Slider'
+behavior_plugins: {  }

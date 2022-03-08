@@ -1,0 +1,21 @@
+uuid: f4216624-f048-4dbb-afe6-bdc5d9f0ddc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - node.type.tutor
+  module:
+    - text
+id: node.tutor.field_bio
+field_name: field_bio
+entity_type: node
+bundle: tutor
+label: Bio
+description: 'What can you tell us about yourself?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

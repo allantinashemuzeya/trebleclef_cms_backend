@@ -1,0 +1,40 @@
+uuid: c40f15fc-7612-42b3-b169-2c23c7f3bf2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_treble_clef_tv
+    - node.type.home_page
+    - paragraphs.paragraphs_type.treble_clef_tv
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_treble_clef_tv
+field_name: field_treble_clef_tv
+entity_type: node
+bundle: home_page
+label: 'Treble Clef Tv'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      treble_clef_tv: treble_clef_tv
+    negate: 0
+    target_bundles_drag_drop:
+      draggable_slider:
+        weight: 5
+        enabled: false
+      fees_module:
+        weight: 6
+        enabled: false
+      music_quotes:
+        weight: 7
+        enabled: false
+      treble_clef_tv:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

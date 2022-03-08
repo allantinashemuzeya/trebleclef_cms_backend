@@ -1,0 +1,74 @@
+uuid: e4a7b2ca-9578-47dd-b0c2-9e6d47f00b87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tutor.field_bio
+    - field.field.node.tutor.field_name
+    - field.field.node.tutor.field_profile_picture
+    - field.field.node.tutor.field_quote
+    - field.field.node.tutor.field_schools
+    - field.field.node.tutor.field_subjects
+    - node.type.tutor
+  module:
+    - image
+    - text
+    - user
+id: node.tutor.default
+targetEntityType: node
+bundle: tutor
+mode: default
+content:
+  field_bio:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_profile_picture:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_quote:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_schools:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_subjects:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

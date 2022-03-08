@@ -1,0 +1,10 @@
+uuid: a33ed129-2310-428f-bba9-2d5912945889
+langcode: en
+status: true
+dependencies: {  }
+id: fees_module
+label: 'Fees Module'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

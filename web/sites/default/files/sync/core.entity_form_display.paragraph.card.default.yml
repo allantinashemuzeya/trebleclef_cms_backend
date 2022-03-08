@@ -1,0 +1,34 @@
+uuid: f9dbca17-a0df-4f4c-8bf8-674634ba8685
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card.field_card_destination
+    - field.field.paragraph.card.field_title
+    - paragraphs.paragraphs_type.card
+  module:
+    - link
+id: paragraph.card.default
+targetEntityType: paragraph
+bundle: card
+mode: default
+content:
+  field_card_destination:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

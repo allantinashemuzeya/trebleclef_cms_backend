@@ -1,0 +1,36 @@
+uuid: ad5f5348-4ec2-460d-b0bb-e95470f5896d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.announcements.field_card_destination
+    - field.field.paragraph.announcements.field_title
+    - paragraphs.paragraphs_type.announcements
+  module:
+    - link
+id: paragraph.announcements.default
+targetEntityType: paragraph
+bundle: announcements
+mode: default
+content:
+  field_card_destination:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

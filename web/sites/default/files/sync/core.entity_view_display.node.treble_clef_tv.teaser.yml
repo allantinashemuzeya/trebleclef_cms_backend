@@ -1,0 +1,22 @@
+uuid: d6921df8-b831-4911-ad2d-c6bd696b9129
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.treble_clef_tv.field_media_item
+    - node.type.treble_clef_tv
+  module:
+    - user
+id: node.treble_clef_tv.teaser
+targetEntityType: node
+bundle: treble_clef_tv
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_media_item: true

@@ -1,0 +1,19 @@
+uuid: 4fb32fc3-24d5-4180-999a-d3f3bf8e9c4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.client
+id: node.client.field_name
+field_name: field_name
+entity_type: node
+bundle: client
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

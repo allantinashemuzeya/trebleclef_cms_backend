@@ -1,0 +1,18 @@
+uuid: 4bd49c11-f426-46a4-aac5-4bec67423504
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Lesson
+type: lesson
+description: 'A lesson'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,23 @@
+uuid: 5310f396-0b42-442d-9ac1-975267d40c58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider_type
+    - paragraphs.paragraphs_type.draggable_slider
+  module:
+    - options
+id: paragraph.draggable_slider.field_slider_type
+field_name: field_slider_type
+entity_type: paragraph
+bundle: draggable_slider
+label: 'Slider Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

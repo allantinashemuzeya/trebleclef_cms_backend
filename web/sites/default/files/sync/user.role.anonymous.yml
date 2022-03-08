@@ -1,0 +1,242 @@
+uuid: ad479e84-885a-4875-b42c-ede9c2071cec
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.client
+    - node.type.communication
+    - node.type.home_page
+    - node.type.lesson
+    - node.type.music_quotes
+    - node.type.page
+    - node.type.school_fees_structure
+    - node.type.schools
+    - node.type.subject
+    - node.type.treble_clef_tv
+    - node.type.tutor
+  module:
+    - block
+    - block_content
+    - comment
+    - contact
+    - contextual
+    - entity_reference_revisions
+    - field_ui
+    - filter
+    - image
+    - media
+    - node
+    - paragraphs
+    - paragraphs_type_permissions
+    - rest
+    - search
+    - system
+    - taxonomy
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer blocks'
+  - 'administer comment display'
+  - 'administer comment fields'
+  - 'administer comment types'
+  - 'administer comments'
+  - 'administer contact_message display'
+  - 'administer contact_message fields'
+  - 'administer image styles'
+  - 'administer media'
+  - 'administer media display'
+  - 'administer media types'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer paragraph display'
+  - 'administer paragraphs settings'
+  - 'administer paragraphs types'
+  - 'administer rest resources'
+  - 'administer taxonomy_term display'
+  - 'administer user display'
+  - 'bypass paragraphs type content access'
+  - 'create article content'
+  - 'create audio media'
+  - 'create client content'
+  - 'create communication content'
+  - 'create document media'
+  - 'create home_page content'
+  - 'create image media'
+  - 'create lesson content'
+  - 'create media'
+  - 'create music_quotes content'
+  - 'create page content'
+  - 'create paragraph content announcements'
+  - 'create paragraph content card'
+  - 'create paragraph content draggable_slider'
+  - 'create paragraph content fees_module'
+  - 'create paragraph content music_quotes'
+  - 'create paragraph content student_of_the_week'
+  - 'create paragraph content treble_clef_tv'
+  - 'create remote_video media'
+  - 'create school_fees_structure content'
+  - 'create schools content'
+  - 'create subject content'
+  - 'create treble_clef_tv content'
+  - 'create tutor content'
+  - 'create video media'
+  - 'delete any article content'
+  - 'delete any audio media'
+  - 'delete any client content'
+  - 'delete any communication content'
+  - 'delete any document media'
+  - 'delete any home_page content'
+  - 'delete any image media'
+  - 'delete any lesson content'
+  - 'delete any media'
+  - 'delete any music_quotes content'
+  - 'delete any page content'
+  - 'delete any remote_video media'
+  - 'delete any school_fees_structure content'
+  - 'delete any schools content'
+  - 'delete any subject content'
+  - 'delete any treble_clef_tv content'
+  - 'delete any tutor content'
+  - 'delete any video media'
+  - 'delete article revisions'
+  - 'delete client revisions'
+  - 'delete communication revisions'
+  - 'delete home_page revisions'
+  - 'delete lesson revisions'
+  - 'delete media'
+  - 'delete music_quotes revisions'
+  - 'delete orphan revisions'
+  - 'delete own article content'
+  - 'delete own audio media'
+  - 'delete own client content'
+  - 'delete own communication content'
+  - 'delete own document media'
+  - 'delete own home_page content'
+  - 'delete own image media'
+  - 'delete own lesson content'
+  - 'delete own music_quotes content'
+  - 'delete own page content'
+  - 'delete own remote_video media'
+  - 'delete own school_fees_structure content'
+  - 'delete own schools content'
+  - 'delete own subject content'
+  - 'delete own treble_clef_tv content'
+  - 'delete own tutor content'
+  - 'delete own video media'
+  - 'delete page revisions'
+  - 'delete paragraph content announcements'
+  - 'delete paragraph content card'
+  - 'delete paragraph content draggable_slider'
+  - 'delete paragraph content fees_module'
+  - 'delete paragraph content music_quotes'
+  - 'delete paragraph content student_of_the_week'
+  - 'delete paragraph content treble_clef_tv'
+  - 'delete school_fees_structure revisions'
+  - 'delete schools revisions'
+  - 'delete subject revisions'
+  - 'delete treble_clef_tv revisions'
+  - 'delete tutor revisions'
+  - 'edit any article content'
+  - 'edit any audio media'
+  - 'edit any client content'
+  - 'edit any communication content'
+  - 'edit any document media'
+  - 'edit any home_page content'
+  - 'edit any image media'
+  - 'edit any lesson content'
+  - 'edit any music_quotes content'
+  - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit any school_fees_structure content'
+  - 'edit any schools content'
+  - 'edit any subject content'
+  - 'edit any treble_clef_tv content'
+  - 'edit any tutor content'
+  - 'edit any video media'
+  - 'edit behavior plugin settings'
+  - 'edit own article content'
+  - 'edit own audio media'
+  - 'edit own client content'
+  - 'edit own comments'
+  - 'edit own communication content'
+  - 'edit own document media'
+  - 'edit own home_page content'
+  - 'edit own image media'
+  - 'edit own lesson content'
+  - 'edit own music_quotes content'
+  - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own school_fees_structure content'
+  - 'edit own schools content'
+  - 'edit own subject content'
+  - 'edit own treble_clef_tv content'
+  - 'edit own tutor content'
+  - 'edit own video media'
+  - 'post comments'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert client revisions'
+  - 'revert communication revisions'
+  - 'revert home_page revisions'
+  - 'revert lesson revisions'
+  - 'revert music_quotes revisions'
+  - 'revert page revisions'
+  - 'revert school_fees_structure revisions'
+  - 'revert schools revisions'
+  - 'revert subject revisions'
+  - 'revert treble_clef_tv revisions'
+  - 'revert tutor revisions'
+  - 'search content'
+  - 'skip comment approval'
+  - 'update any media'
+  - 'update media'
+  - 'update paragraph content announcements'
+  - 'update paragraph content card'
+  - 'update paragraph content draggable_slider'
+  - 'update paragraph content fees_module'
+  - 'update paragraph content music_quotes'
+  - 'update paragraph content student_of_the_week'
+  - 'update paragraph content treble_clef_tv'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view client revisions'
+  - 'view communication revisions'
+  - 'view home_page revisions'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view paragraph content announcements'
+  - 'view paragraph content card'
+  - 'view paragraph content draggable_slider'
+  - 'view paragraph content fees_module'
+  - 'view paragraph content music_quotes'
+  - 'view paragraph content student_of_the_week'
+  - 'view paragraph content treble_clef_tv'
+  - 'view unpublished paragraphs'

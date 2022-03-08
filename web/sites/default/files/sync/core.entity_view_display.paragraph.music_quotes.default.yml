@@ -1,0 +1,24 @@
+uuid: e2c8f7de-94d9-487d-9c82-03359beaee00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.music_quotes.field_music_quotes_images
+    - paragraphs.paragraphs_type.music_quotes
+  module:
+    - image
+id: paragraph.music_quotes.default
+targetEntityType: paragraph
+bundle: music_quotes
+mode: default
+content:
+  field_music_quotes_images:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

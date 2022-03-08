@@ -1,0 +1,18 @@
+uuid: 030395b9-d981-4618-9103-912fc5a720bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Treble Clef Tv'
+type: treble_clef_tv
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

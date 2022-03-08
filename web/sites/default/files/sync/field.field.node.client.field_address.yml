@@ -1,0 +1,21 @@
+uuid: 3f04e6f1-1e38-4ab2-8213-8fe25d6db299
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.client
+  module:
+    - text
+id: node.client.field_address
+field_name: field_address
+entity_type: node
+bundle: client
+label: Address
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

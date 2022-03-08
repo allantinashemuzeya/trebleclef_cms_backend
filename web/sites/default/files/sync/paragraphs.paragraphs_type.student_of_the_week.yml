@@ -1,0 +1,10 @@
+uuid: 5c89c0f1-4bd4-4a36-baa2-21cdebae2c3e
+langcode: en
+status: true
+dependencies: {  }
+id: student_of_the_week
+label: 'Student Of The Week'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

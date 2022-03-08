@@ -1,0 +1,28 @@
+uuid: 53614717-b19a-4f11-a5cb-a33e48ba3fea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_destination
+    - paragraphs.paragraphs_type.announcements
+  module:
+    - link
+id: paragraph.announcements.field_card_destination
+field_name: field_card_destination
+entity_type: paragraph
+bundle: announcements
+label: 'Card Destination'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/announcements'
+    title: Announcements
+    options: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

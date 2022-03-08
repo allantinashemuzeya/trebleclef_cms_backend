@@ -1,0 +1,10 @@
+uuid: 4bb06a3e-1856-4fec-a037-9101fa480bbc
+langcode: en
+status: true
+dependencies: {  }
+id: announcements
+label: Announcements
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

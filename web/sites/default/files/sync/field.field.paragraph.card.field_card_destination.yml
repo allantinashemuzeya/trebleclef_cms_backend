@@ -1,0 +1,28 @@
+uuid: ec069da7-0207-497a-9d5c-5b7cc3ac196f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_destination
+    - paragraphs.paragraphs_type.card
+  module:
+    - link
+id: paragraph.card.field_card_destination
+field_name: field_card_destination
+entity_type: paragraph
+bundle: card
+label: 'Card Destination'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/profile'
+    title: Profile
+    options: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

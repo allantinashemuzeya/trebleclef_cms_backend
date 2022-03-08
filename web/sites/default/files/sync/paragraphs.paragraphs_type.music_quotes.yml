@@ -1,0 +1,10 @@
+uuid: a1e246d3-7329-4e79-96d4-6a76736481ac
+langcode: en
+status: true
+dependencies: {  }
+id: music_quotes
+label: 'Music Quotes'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

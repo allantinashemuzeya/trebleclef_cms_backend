@@ -1,0 +1,31 @@
+uuid: 7ee33db3-cdb3-4af3-bafb-db7e625708b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_tutorial
+    - media.type.remote_video
+    - media.type.video
+    - node.type.lesson
+id: node.lesson.field_video_tutorial
+field_name: field_video_tutorial
+entity_type: node
+bundle: lesson
+label: 'Video Tutorial'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: remote_video
+field_type: entity_reference

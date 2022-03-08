@@ -1,0 +1,40 @@
+uuid: 65355998-3f0b-463a-a723-120dda03ebb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.draggable_slider.field_media
+    - field.field.paragraph.draggable_slider.field_slider_type
+    - field.field.paragraph.draggable_slider.field_title
+    - paragraphs.paragraphs_type.draggable_slider
+  module:
+    - media_library
+id: paragraph.draggable_slider.default
+targetEntityType: paragraph
+bundle: draggable_slider
+mode: default
+content:
+  field_media:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_slider_type:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

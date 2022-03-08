@@ -1,0 +1,26 @@
+uuid: 08907c0b-e6ca-4c4a-885b-50533ef6138d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.schools.field_banner
+    - field.field.node.schools.field_location
+    - field.field.node.schools.field_name
+    - node.type.schools
+  module:
+    - user
+id: node.schools.teaser
+targetEntityType: node
+bundle: schools
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_banner: true
+  field_location: true
+  field_name: true

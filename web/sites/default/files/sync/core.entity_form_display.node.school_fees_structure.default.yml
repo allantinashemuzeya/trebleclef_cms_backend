@@ -1,0 +1,135 @@
+uuid: 3dc67f0d-c569-4a96-8c56-e34fc2543ccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.school_fees_structure.field_registration_fee
+    - field.field.node.school_fees_structure.field_school_fee_packages
+    - node.type.school_fees_structure
+  module:
+    - field_group
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_fees:
+      children:
+        - group_registration_fee
+        - group_fees_packages
+      label: Fees
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_registration_fee:
+      children:
+        - field_registration_fee
+      label: 'Registration Fee'
+      region: content
+      parent_name: group_fees
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_fees_packages:
+      children:
+        - field_school_fee_packages
+      label: 'Fees Packages'
+      region: content
+      parent_name: group_fees
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.school_fees_structure.default
+targetEntityType: node
+bundle: school_fees_structure
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_registration_fee:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_school_fee_packages:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

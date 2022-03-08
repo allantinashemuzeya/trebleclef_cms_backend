@@ -1,0 +1,26 @@
+uuid: 31d9cbdd-073e-4f72-b98a-6bc5be558398
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.music_quotes.field_music_quotes_images
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.music_quotes
+  module:
+    - image
+id: paragraph.music_quotes.default
+targetEntityType: paragraph
+bundle: music_quotes
+mode: default
+content:
+  field_music_quotes_images:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

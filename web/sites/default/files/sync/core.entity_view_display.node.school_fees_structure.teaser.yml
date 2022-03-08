@@ -1,0 +1,24 @@
+uuid: fbe62ee8-c817-4163-bec7-503995572673
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.school_fees_structure.field_registration_fee
+    - field.field.node.school_fees_structure.field_school_fee_packages
+    - node.type.school_fees_structure
+  module:
+    - user
+id: node.school_fees_structure.teaser
+targetEntityType: node
+bundle: school_fees_structure
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_registration_fee: true
+  field_school_fee_packages: true

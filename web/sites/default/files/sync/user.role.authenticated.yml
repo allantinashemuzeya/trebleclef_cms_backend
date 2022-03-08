@@ -1,0 +1,113 @@
+uuid: 7a64f487-3354-419a-b372-be3a51068a6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.article
+    - node.type.client
+    - node.type.communication
+    - node.type.home_page
+    - node.type.lesson
+    - node.type.music_quotes
+    - node.type.page
+    - node.type.school_fees_structure
+    - node.type.schools
+    - node.type.subject
+    - node.type.treble_clef_tv
+    - node.type.tutor
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - node
+    - paragraphs
+    - paragraphs_type_permissions
+    - rest
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'administer paragraphs settings'
+  - 'administer paragraphs types'
+  - 'administer rest resources'
+  - 'bypass paragraphs type content access'
+  - 'create article content'
+  - 'create client content'
+  - 'create communication content'
+  - 'create home_page content'
+  - 'create lesson content'
+  - 'create music_quotes content'
+  - 'create page content'
+  - 'create paragraph content announcements'
+  - 'create paragraph content card'
+  - 'create paragraph content draggable_slider'
+  - 'create paragraph content fees_module'
+  - 'create paragraph content music_quotes'
+  - 'create paragraph content student_of_the_week'
+  - 'create paragraph content treble_clef_tv'
+  - 'create school_fees_structure content'
+  - 'create schools content'
+  - 'create subject content'
+  - 'create treble_clef_tv content'
+  - 'create tutor content'
+  - 'delete any article content'
+  - 'delete any client content'
+  - 'delete any communication content'
+  - 'delete any home_page content'
+  - 'delete any lesson content'
+  - 'delete any music_quotes content'
+  - 'delete any page content'
+  - 'delete any school_fees_structure content'
+  - 'delete any schools content'
+  - 'delete any subject content'
+  - 'delete any treble_clef_tv content'
+  - 'delete any tutor content'
+  - 'delete own article content'
+  - 'delete own client content'
+  - 'delete own communication content'
+  - 'delete own home_page content'
+  - 'delete own lesson content'
+  - 'delete own music_quotes content'
+  - 'delete own page content'
+  - 'delete paragraph content announcements'
+  - 'delete paragraph content card'
+  - 'delete paragraph content draggable_slider'
+  - 'delete paragraph content fees_module'
+  - 'delete paragraph content music_quotes'
+  - 'delete paragraph content student_of_the_week'
+  - 'delete paragraph content treble_clef_tv'
+  - 'edit behavior plugin settings'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'update paragraph content announcements'
+  - 'update paragraph content card'
+  - 'update paragraph content draggable_slider'
+  - 'update paragraph content fees_module'
+  - 'update paragraph content music_quotes'
+  - 'update paragraph content student_of_the_week'
+  - 'update paragraph content treble_clef_tv'
+  - 'use text format basic_html'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view paragraph content announcements'
+  - 'view paragraph content card'
+  - 'view paragraph content draggable_slider'
+  - 'view paragraph content fees_module'
+  - 'view paragraph content music_quotes'
+  - 'view paragraph content student_of_the_week'
+  - 'view paragraph content treble_clef_tv'
+  - 'view unpublished paragraphs'

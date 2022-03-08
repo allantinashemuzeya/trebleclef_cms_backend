@@ -1,0 +1,26 @@
+uuid: 7f933aae-a58c-47aa-8a16-899734f4715e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.subject.field_cover_image
+    - field.field.node.subject.field_name
+    - field.field.node.subject.field_overview
+    - node.type.subject
+  module:
+    - user
+id: node.subject.teaser
+targetEntityType: node
+bundle: subject
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cover_image: true
+  field_name: true
+  field_overview: true

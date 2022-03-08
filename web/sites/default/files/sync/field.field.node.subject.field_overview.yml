@@ -1,0 +1,21 @@
+uuid: 0c61674d-ceea-47e4-a626-1aefbacd1a41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overview
+    - node.type.subject
+  module:
+    - text
+id: node.subject.field_overview
+field_name: field_overview
+entity_type: node
+bundle: subject
+label: Overview
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 1099e2cd-8324-44ab-9072-23d65eaf4e46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote
+    - node.type.tutor
+  module:
+    - text
+id: node.tutor.field_quote
+field_name: field_quote
+entity_type: node
+bundle: tutor
+label: Quote
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

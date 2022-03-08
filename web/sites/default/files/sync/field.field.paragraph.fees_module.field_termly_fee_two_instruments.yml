@@ -1,0 +1,23 @@
+uuid: e4aef4f0-9952-4986-87ce-c52a55e89526
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_termly_fee_two_instruments
+    - paragraphs.paragraphs_type.fees_module
+id: paragraph.fees_module.field_termly_fee_two_instruments
+field_name: field_termly_fee_two_instruments
+entity_type: paragraph
+bundle: fees_module
+label: 'Termly Fee Two Instruments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

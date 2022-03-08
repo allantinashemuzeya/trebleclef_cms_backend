@@ -1,0 +1,8 @@
+uuid: 591fd622-909b-4049-aa61-3fc946852bf3
+langcode: en
+status: true
+dependencies: {  }
+name: 'School Locations'
+vid: school_locations
+description: 'Where our schools are located'
+weight: 0

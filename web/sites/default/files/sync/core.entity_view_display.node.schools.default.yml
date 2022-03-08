@@ -1,0 +1,48 @@
+uuid: c83e8f74-b93c-4ee6-9420-99c867628c17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.schools.field_banner
+    - field.field.node.schools.field_location
+    - field.field.node.schools.field_name
+    - node.type.schools
+  module:
+    - image
+    - user
+id: node.schools.default
+targetEntityType: node
+bundle: schools
+mode: default
+content:
+  field_banner:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

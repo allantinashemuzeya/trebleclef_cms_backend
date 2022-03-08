@@ -1,0 +1,29 @@
+uuid: 15772dcd-eb52-4403-8857-43e3b2473d28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.student_of_the_week.field_description
+    - field.field.paragraph.student_of_the_week.field_student
+    - paragraphs.paragraphs_type.student_of_the_week
+id: paragraph.student_of_the_week.default
+targetEntityType: paragraph
+bundle: student_of_the_week
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_student:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

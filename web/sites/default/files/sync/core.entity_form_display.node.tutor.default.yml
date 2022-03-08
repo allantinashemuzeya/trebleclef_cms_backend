@@ -1,0 +1,209 @@
+uuid: fad0bc9d-8604-42ec-926f-a81ed356594b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tutor.field_bio
+    - field.field.node.tutor.field_name
+    - field.field.node.tutor.field_profile_picture
+    - field.field.node.tutor.field_quote
+    - field.field.node.tutor.field_schools
+    - field.field.node.tutor.field_subjects
+    - image.style.thumbnail
+    - node.type.tutor
+  module:
+    - field_group
+    - image
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_tutor:
+      children:
+        - group_tutor_intro
+        - group_about_tutor
+        - group_subjects
+        - group_schools_taught_at
+      label: Tutor
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_tutor_intro:
+      children:
+        - title
+        - field_name
+        - field_profile_picture
+      label: 'Tutor Intro'
+      region: content
+      parent_name: group_tutor
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_about_tutor:
+      children:
+        - field_quote
+        - field_bio
+      label: 'About Tutor'
+      region: content
+      parent_name: group_tutor
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_schools_taught_at:
+      children:
+        - field_schools
+      label: 'Schools Taught At'
+      region: content
+      parent_name: group_tutor
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_subjects:
+      children:
+        - field_subjects
+      label: Subjects
+      region: content
+      parent_name: group_tutor
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.tutor.default
+targetEntityType: node
+bundle: tutor
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bio:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_profile_picture:
+    type: image_image
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_quote:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_schools:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_subjects:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

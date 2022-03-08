@@ -1,0 +1,24 @@
+uuid: 3bd1f826-cffa-4cdc-8647-d9c3e4535ccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.music_quotes.field_image_quotes
+    - field.field.node.music_quotes.field_quote_cube_color
+    - node.type.music_quotes
+  module:
+    - user
+id: node.music_quotes.teaser
+targetEntityType: node
+bundle: music_quotes
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_image_quotes: true
+  field_quote_cube_color: true

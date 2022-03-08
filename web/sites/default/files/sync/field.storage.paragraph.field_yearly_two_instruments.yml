@@ -1,0 +1,18 @@
+uuid: 7a8bcb8a-a90c-4159-8857-500536044d28
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_yearly_two_instruments
+field_name: field_yearly_two_instruments
+entity_type: paragraph
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

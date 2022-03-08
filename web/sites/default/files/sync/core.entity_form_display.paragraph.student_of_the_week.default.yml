@@ -1,0 +1,34 @@
+uuid: 13ce81ba-b037-4ff3-9d6b-43226577abbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.student_of_the_week.field_description
+    - field.field.paragraph.student_of_the_week.field_student
+    - paragraphs.paragraphs_type.student_of_the_week
+id: paragraph.student_of_the_week.default
+targetEntityType: paragraph
+bundle: student_of_the_week
+mode: default
+content:
+  field_description:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_student:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

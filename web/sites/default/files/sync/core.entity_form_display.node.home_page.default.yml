@@ -1,0 +1,185 @@
+uuid: ed1c756a-04c9-43fe-ad72-d1155c562f4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_page.field_draggable_slider
+    - field.field.node.home_page.field_music_quotes
+    - field.field.node.home_page.field_treble_clef_tv
+    - node.type.home_page
+  module:
+    - field_group
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_home_:
+      children:
+        - group_home_intro
+        - group_swiper_slider
+        - group_treble_clef_tv
+        - group_music_quotes
+      label: 'Home '
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_swiper_slider:
+      children:
+        - field_draggable_slider
+      label: 'Swiper Slider'
+      region: content
+      parent_name: group_home_
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_treble_clef_tv:
+      children:
+        - field_treble_clef_tv
+      label: 'Treble Clef Tv'
+      region: content
+      parent_name: group_home_
+      weight: 2
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_music_quotes:
+      children:
+        - field_music_quotes
+      label: 'Music Quotes'
+      region: content
+      parent_name: group_home_
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_home_intro:
+      children:
+        - title
+      label: 'Home Intro'
+      region: content
+      parent_name: group_home_
+      weight: 0
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+id: node.home_page.default
+targetEntityType: node
+bundle: home_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_draggable_slider:
+    type: entity_reference_paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_music_quotes:
+    type: entity_reference_paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_treble_clef_tv:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

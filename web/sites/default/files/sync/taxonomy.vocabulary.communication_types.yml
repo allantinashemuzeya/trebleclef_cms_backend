@@ -1,0 +1,8 @@
+uuid: 2080cb4c-4b1f-481e-8d39-f78f9cae06df
+langcode: en
+status: true
+dependencies: {  }
+name: 'Communication Types'
+vid: communication_types
+description: ''
+weight: 0

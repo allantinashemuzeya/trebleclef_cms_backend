@@ -1,0 +1,21 @@
+uuid: e08d375b-891f-4bb6-9b85-25044c97b788
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skills_covered
+    - node.type.lesson
+  module:
+    - text
+id: node.lesson.field_skills_covered
+field_name: field_skills_covered
+entity_type: node
+bundle: lesson
+label: 'Skills Covered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

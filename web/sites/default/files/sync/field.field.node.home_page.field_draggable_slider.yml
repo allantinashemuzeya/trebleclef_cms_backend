@@ -1,0 +1,40 @@
+uuid: 87e35233-e79f-47cd-b3a7-1d26d4e2919e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_draggable_slider
+    - node.type.home_page
+    - paragraphs.paragraphs_type.draggable_slider
+  module:
+    - entity_reference_revisions
+id: node.home_page.field_draggable_slider
+field_name: field_draggable_slider
+entity_type: node
+bundle: home_page
+label: 'Draggable Slider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      draggable_slider: draggable_slider
+    negate: 0
+    target_bundles_drag_drop:
+      draggable_slider:
+        weight: 5
+        enabled: true
+      fees_module:
+        weight: 6
+        enabled: false
+      music_quotes:
+        weight: 7
+        enabled: false
+      treble_clef_tv:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

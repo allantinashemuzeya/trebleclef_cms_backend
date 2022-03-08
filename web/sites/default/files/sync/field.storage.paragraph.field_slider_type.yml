@@ -1,0 +1,27 @@
+uuid: c731501c-d5ed-4128-a620-573d4b194f9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_slider_type
+field_name: field_slider_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: standard
+      label: Standard
+    -
+      value: threeDimensional
+      label: '3D Effect'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

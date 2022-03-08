@@ -1,0 +1,29 @@
+uuid: 325041c6-ceca-4f63-ba7d-91f9af4e8d67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subjects
+    - node.type.subject
+    - node.type.tutor
+id: node.tutor.field_subjects
+field_name: field_subjects
+entity_type: node
+bundle: tutor
+label: Subjects
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      subject: subject
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,42 @@
+uuid: fae6c296-787c-4bac-9a77-664d08b7ab13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.school_fees_structure.field_registration_fee
+    - field.field.node.school_fees_structure.field_school_fee_packages
+    - node.type.school_fees_structure
+  module:
+    - entity_reference_revisions
+    - user
+id: node.school_fees_structure.default
+targetEntityType: node
+bundle: school_fees_structure
+mode: default
+content:
+  field_registration_fee:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_school_fee_packages:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

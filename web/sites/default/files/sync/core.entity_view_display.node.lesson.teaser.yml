@@ -1,0 +1,34 @@
+uuid: 5c548f52-c1f8-42e4-a45b-4e75d2c925af
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lesson.field_author
+    - field.field.node.lesson.field_images
+    - field.field.node.lesson.field_learning_objectives
+    - field.field.node.lesson.field_name
+    - field.field.node.lesson.field_overview
+    - field.field.node.lesson.field_skills_covered
+    - field.field.node.lesson.field_video_tutorial
+    - node.type.lesson
+  module:
+    - user
+id: node.lesson.teaser
+targetEntityType: node
+bundle: lesson
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_author: true
+  field_images: true
+  field_learning_objectives: true
+  field_name: true
+  field_overview: true
+  field_skills_covered: true
+  field_video_tutorial: true

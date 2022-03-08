@@ -1,0 +1,29 @@
+uuid: 8e7a02e2-3c45-4d45-948a-9f008dd47a93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.treble_clef_tv.field_media_item
+    - node.type.treble_clef_tv
+  module:
+    - user
+id: node.treble_clef_tv.default
+targetEntityType: node
+bundle: treble_clef_tv
+mode: default
+content:
+  field_media_item:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

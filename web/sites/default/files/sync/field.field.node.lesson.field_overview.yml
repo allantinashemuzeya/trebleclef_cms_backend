@@ -1,0 +1,21 @@
+uuid: 1d67357c-cd9f-4c06-b78d-a15b362e45f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overview
+    - node.type.lesson
+  module:
+    - text
+id: node.lesson.field_overview
+field_name: field_overview
+entity_type: node
+bundle: lesson
+label: Overview
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

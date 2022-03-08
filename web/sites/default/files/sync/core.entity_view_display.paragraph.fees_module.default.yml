@@ -1,0 +1,84 @@
+uuid: 47291d43-dd52-4c02-9868-1a1a8cbc3da0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.fees_module.field_monthly_fee_one_instrument
+    - field.field.paragraph.fees_module.field_monthly_fee_two_instrument
+    - field.field.paragraph.fees_module.field_termly_fee_one_instrument
+    - field.field.paragraph.fees_module.field_termly_fee_two_instruments
+    - field.field.paragraph.fees_module.field_yearly_fee_one_instrument
+    - field.field.paragraph.fees_module.field_yearly_two_instruments
+    - paragraphs.paragraphs_type.fees_module
+id: paragraph.fees_module.default
+targetEntityType: paragraph
+bundle: fees_module
+mode: default
+content:
+  field_monthly_fee_one_instrument:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_monthly_fee_two_instrument:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_termly_fee_one_instrument:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_termly_fee_two_instruments:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_yearly_fee_one_instrument:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_yearly_two_instruments:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

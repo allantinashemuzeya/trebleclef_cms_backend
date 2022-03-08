@@ -1,0 +1,32 @@
+uuid: fd19a40b-d119-4a0d-8679-583a04791950
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tutor.field_bio
+    - field.field.node.tutor.field_name
+    - field.field.node.tutor.field_profile_picture
+    - field.field.node.tutor.field_quote
+    - field.field.node.tutor.field_schools
+    - field.field.node.tutor.field_subjects
+    - node.type.tutor
+  module:
+    - user
+id: node.tutor.teaser
+targetEntityType: node
+bundle: tutor
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bio: true
+  field_name: true
+  field_profile_picture: true
+  field_quote: true
+  field_schools: true
+  field_subjects: true

@@ -1,0 +1,23 @@
+uuid: 4e12fc30-fbad-4ea5-a0cd-a8d2a0d08799
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_monthly_fee_two_instrument
+    - paragraphs.paragraphs_type.fees_module
+id: paragraph.fees_module.field_monthly_fee_two_instrument
+field_name: field_monthly_fee_two_instrument
+entity_type: paragraph
+bundle: fees_module
+label: 'Monthly Fee Two Instruments'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

@@ -1,0 +1,82 @@
+uuid: 21a77cba-9cad-46a5-ab89-22078567ad39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.lesson.field_author
+    - field.field.node.lesson.field_images
+    - field.field.node.lesson.field_learning_objectives
+    - field.field.node.lesson.field_name
+    - field.field.node.lesson.field_overview
+    - field.field.node.lesson.field_skills_covered
+    - field.field.node.lesson.field_video_tutorial
+    - node.type.lesson
+  module:
+    - image
+    - text
+    - user
+id: node.lesson.default
+targetEntityType: node
+bundle: lesson
+mode: default
+content:
+  field_author:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_images:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_learning_objectives:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_overview:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_skills_covered:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_video_tutorial:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

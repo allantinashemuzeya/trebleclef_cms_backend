@@ -1,0 +1,19 @@
+uuid: d2615989-0a3e-4d89-8361-bb1a37b10138
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_card_destination
+field_name: field_card_destination
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
