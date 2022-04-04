@@ -1,0 +1,27 @@
+uuid: fdf05121-2bbe-4dd0-9cde-10be77277c57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_calendar_pdf
+    - node.type.calendar
+  module:
+    - file
+id: node.calendar.field_calendar_pdf
+field_name: field_calendar_pdf
+entity_type: node
+bundle: calendar
+label: 'Calendar pdf'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

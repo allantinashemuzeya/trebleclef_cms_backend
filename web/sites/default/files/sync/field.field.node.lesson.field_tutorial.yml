@@ -1,0 +1,31 @@
+uuid: 99fc1929-9b31-461c-8965-e6c1618b09d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tutorial
+    - media.type.image
+    - media.type.video
+    - node.type.lesson
+id: node.lesson.field_tutorial
+field_name: field_tutorial
+entity_type: node
+bundle: lesson
+label: Tutorial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

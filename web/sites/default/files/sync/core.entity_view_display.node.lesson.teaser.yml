@@ -10,6 +10,8 @@ dependencies:
     - field.field.node.lesson.field_name
     - field.field.node.lesson.field_overview
     - field.field.node.lesson.field_skills_covered
+    - field.field.node.lesson.field_subject
+    - field.field.node.lesson.field_tutorial
     - field.field.node.lesson.field_video_tutorial
     - node.type.lesson
   module:
@@ -31,4 +33,6 @@ hidden:
   field_name: true
   field_overview: true
   field_skills_covered: true
+  field_subject: true
+  field_tutorial: true
   field_video_tutorial: true

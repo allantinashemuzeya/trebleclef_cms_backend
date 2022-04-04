@@ -1,0 +1,10 @@
+uuid: 507ce2be-c26c-485a-8bfb-a5a0ad45d0cf
+langcode: en
+status: true
+dependencies: {  }
+id: navigation_cards
+label: 'Navigation Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

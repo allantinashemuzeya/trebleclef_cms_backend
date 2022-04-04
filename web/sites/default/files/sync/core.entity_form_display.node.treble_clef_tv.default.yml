@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.treble_clef_tv.field_media_item
+    - field.field.node.treble_clef_tv.field_tv_title
     - node.type.treble_clef_tv
   module:
     - media_library
@@ -25,6 +26,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_tv_title:
+    type: string_textfield
+    weight: 123
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

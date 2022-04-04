@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.treble_clef_tv.field_media_item
+    - field.field.node.treble_clef_tv.field_tv_title
     - node.type.treble_clef_tv
   module:
     - user
@@ -20,3 +21,4 @@ content:
     region: content
 hidden:
   field_media_item: true
+  field_tv_title: true

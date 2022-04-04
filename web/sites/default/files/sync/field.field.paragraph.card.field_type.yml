@@ -1,0 +1,21 @@
+uuid: 74a47de5-9835-4df6-8c1e-4057c0c212e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type
+    - paragraphs.paragraphs_type.card
+  module:
+    - options
+id: paragraph.card.field_type
+field_name: field_type
+entity_type: paragraph
+bundle: card
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

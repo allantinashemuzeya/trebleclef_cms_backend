@@ -1,0 +1,36 @@
+uuid: 09501788-fa6b-47b0-9af0-3c0d538d2348
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.navigation_cards.field_card
+    - field.field.paragraph.navigation_cards.field_content
+    - paragraphs.paragraphs_type.navigation_cards
+  module:
+    - link
+id: paragraph.navigation_cards.default
+targetEntityType: paragraph
+bundle: navigation_cards
+mode: default
+content:
+  field_card:
+    type: link_default
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_content:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

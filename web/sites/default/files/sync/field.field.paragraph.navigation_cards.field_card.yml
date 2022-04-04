@@ -1,0 +1,23 @@
+uuid: 3dafc368-867f-428d-a41d-b90a98ed6b7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card
+    - paragraphs.paragraphs_type.navigation_cards
+  module:
+    - link
+id: paragraph.navigation_cards.field_card
+field_name: field_card
+entity_type: paragraph
+bundle: navigation_cards
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,29 @@
+uuid: b79080a3-8df0-4686-ae78-ebe0596f8ef0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.calendar.field_calendar_pdf
+    - node.type.calendar
+  module:
+    - file
+    - user
+id: node.calendar.default
+targetEntityType: node
+bundle: calendar
+mode: default
+content:
+  field_calendar_pdf:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -3,23 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card.field_card_destination
+    - field.field.paragraph.card.field_background_image
     - field.field.paragraph.card.field_title
+    - field.field.paragraph.card.field_type
     - paragraphs.paragraphs_type.card
   module:
-    - link
+    - media_library
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
 mode: default
 content:
-  field_card_destination:
-    type: link_default
+  field_background_image:
+    type: media_library_widget
     weight: 1
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      media_types: {  }
     third_party_settings: {  }
   field_title:
     type: string_textfield
@@ -28,6 +28,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_type:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true

@@ -1,0 +1,19 @@
+uuid: b9ded81a-cdb2-4d0a-9adc-2d0c98db8bf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.treble_clef_tv
+id: paragraph.treble_clef_tv.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: treble_clef_tv
+label: 'Tv Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

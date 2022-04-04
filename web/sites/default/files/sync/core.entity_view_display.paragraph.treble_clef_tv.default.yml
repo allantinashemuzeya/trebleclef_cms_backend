@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.treble_clef_tv.field_title
     - field.field.paragraph.treble_clef_tv.field_tv_content
     - paragraphs.paragraphs_type.treble_clef_tv
 id: paragraph.treble_clef_tv.default
@@ -10,6 +11,14 @@ targetEntityType: paragraph
 bundle: treble_clef_tv
 mode: default
 content:
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_tv_content:
     type: entity_reference_entity_view
     label: above

@@ -1,0 +1,22 @@
+uuid: 7583a8c6-8e20-4e28-bdba-64e36da070d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.calendar.field_calendar_pdf
+    - node.type.calendar
+  module:
+    - user
+id: node.calendar.teaser
+targetEntityType: node
+bundle: calendar
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_calendar_pdf: true

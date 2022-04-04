@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.lesson.field_name
     - field.field.node.lesson.field_overview
     - field.field.node.lesson.field_skills_covered
+    - field.field.node.lesson.field_subject
+    - field.field.node.lesson.field_tutorial
     - field.field.node.lesson.field_video_tutorial
     - node.type.lesson
   module:
@@ -60,11 +62,29 @@ content:
     weight: 102
     region: content
   field_skills_covered:
-    type: text_default
+    type: entity_reference_label
     label: above
-    settings: {  }
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 108
+    region: content
+  field_subject:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_tutorial:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 109
     region: content
   field_video_tutorial:
     type: entity_reference_label

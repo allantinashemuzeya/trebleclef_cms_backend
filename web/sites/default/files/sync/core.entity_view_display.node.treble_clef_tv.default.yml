@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.treble_clef_tv.field_media_item
+    - field.field.node.treble_clef_tv.field_tv_title
     - node.type.treble_clef_tv
   module:
     - user
@@ -20,6 +21,14 @@ content:
       link: false
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_tv_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

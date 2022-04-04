@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.home_page.field_draggable_slider
+    - field.field.node.home_page.field_home_navigation
     - field.field.node.home_page.field_music_quotes
     - field.field.node.home_page.field_treble_clef_tv
     - node.type.home_page
@@ -23,6 +24,15 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_home_navigation:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 104
     region: content
   field_music_quotes:
     type: entity_reference_revisions_entity_view

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.treble_clef_tv.field_title
     - field.field.paragraph.treble_clef_tv.field_tv_content
     - paragraphs.paragraphs_type.treble_clef_tv
   module:
@@ -12,9 +13,17 @@ targetEntityType: paragraph
 bundle: treble_clef_tv
 mode: default
 content:
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_tv_content:
     type: media_library_widget
-    weight: 0
+    weight: 1
     region: content
     settings:
       media_types: {  }

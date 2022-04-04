@@ -1,0 +1,21 @@
+uuid: 5a563603-eb61-4fd6-ab50-5c423ff0340d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_communication_type
+    - node.type.communication
+  module:
+    - options
+id: node.communication.field_communication_type
+field_name: field_communication_type
+entity_type: node
+bundle: communication
+label: 'Communication Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

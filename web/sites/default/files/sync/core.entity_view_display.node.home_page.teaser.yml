@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.home_page.field_draggable_slider
+    - field.field.node.home_page.field_home_navigation
     - field.field.node.home_page.field_music_quotes
     - field.field.node.home_page.field_treble_clef_tv
     - node.type.home_page
@@ -22,5 +23,6 @@ content:
     region: content
 hidden:
   field_draggable_slider: true
+  field_home_navigation: true
   field_music_quotes: true
   field_treble_clef_tv: true

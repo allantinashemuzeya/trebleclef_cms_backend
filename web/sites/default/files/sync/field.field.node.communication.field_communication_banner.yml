@@ -1,0 +1,29 @@
+uuid: eee54930-09b5-4779-9580-d86fe325fc55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_communication_banner
+    - media.type.image
+    - node.type.communication
+id: node.communication.field_communication_banner
+field_name: field_communication_banner
+entity_type: node
+bundle: communication
+label: 'Communication Banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

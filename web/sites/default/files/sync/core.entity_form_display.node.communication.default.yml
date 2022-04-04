@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.communication.body
+    - field.field.node.communication.field_communication_banner
+    - field.field.node.communication.field_communication_type
     - field.field.node.communication.field_media
     - node.type.communication
   module:
@@ -26,12 +28,14 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        direction: vertical
+        direction: horizontal
         width_breakpoint: 640
     group_communication_info:
       children:
         - title
+        - field_communication_type
         - body
+        - field_communication_banner
       label: 'Communication Info'
       region: content
       parent_name: group_communication
@@ -77,6 +81,19 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_communication_banner:
+    type: media_library_widget
+    weight: 121
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_communication_type:
+    type: options_select
+    weight: 122
     region: content
     settings: {  }
     third_party_settings: {  }
